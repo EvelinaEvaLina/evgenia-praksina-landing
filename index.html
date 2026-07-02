@@ -71,7 +71,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,249,247,
 .section-header{text-align:center;margin-bottom:56px}
 .section-header .section-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);margin-bottom:10px}
 .section-header h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:500;color:var(--burgundy)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--powder)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--powder)}
 .service-card{background:var(--white);padding:36px 32px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
 .service-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--burgundy);transition:.3s}
 .service-card:hover::after{width:100%}
@@ -125,6 +125,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,249,247,
 .faq-item.open .faq-answer{max-height:300px}
 .faq-answer-inner{padding:0 0 20px;font-size:.88rem;line-height:1.8;color:var(--gray)}
 
+/* REVIEWS */
+.reviews{padding:80px 64px}
+.reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.review-card{background:var(--powder-light);padding:36px 32px;border-top:4px solid var(--burgundy);position:relative}
+.review-card::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--rose);opacity:.5;line-height:1;display:block;margin-bottom:8px}
+.review-card p{font-size:.88rem;line-height:1.85;color:var(--gray);font-style:italic;white-space:pre-line}
+
 /* TELEGRAM CTA */
 .tg-cta{padding:80px 64px;text-align:center;background:var(--burgundy);color:#fff;position:relative;overflow:hidden}
 .tg-cta::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.04)}
@@ -173,6 +180,8 @@ footer span{color:var(--rose)}
   .gallery{padding:60px 24px}
   .faq{padding:60px 24px}
   .faq-inner{grid-template-columns:1fr}
+  .reviews{padding:60px 24px}
+  .reviews-grid{grid-template-columns:1fr}
   .tg-cta{padding:60px 24px}
   .contacts{padding:60px 24px}
   .contacts-inner{grid-template-columns:1fr}
@@ -189,6 +198,7 @@ footer span{color:var(--rose)}
     <a href="#about">Обо мне</a>
     <a href="#services">Услуги</a>
     <a href="#gallery">Работы</a>
+    <a href="#reviews">Отзывы</a>
     <a href="#contacts">Записаться</a>
   </div>
 </nav>
@@ -242,21 +252,14 @@ footer span{color:var(--rose)}
       <span class="service-icon">✂️</span>
       <h3>Стрижки</h3>
       <p>Женские, мужские и детские стрижки любой сложности с учётом типа волос и образа жизни.</p>
-      <div class="service-expand">Классические, авангардные, геометрические стрижки. Работа с любым типом и текстурой волос. Подбор формы с учётом типа лица и пожеланий клиента.</div>
+      <div class="service-expand">Классические, авангардные, геометрические стрижки. Работа с любым типом и текстурой волос. Подбор формы с учётом типа лица и пожеланий клиента.<br><br>Являюсь ученицей Дениса Илютина — основной школы по стрижкам в России. Прошла курсы, имею дипломы школы «Артерия» Дениса Илютина.</div>
       <span class="service-toggle">Подробнее ↓</span>
     </div>
     <div class="service-card" onclick="toggleService(this)">
       <span class="service-icon">🎨</span>
-      <h3>Окрашивание</h3>
-      <p>Сложные техники окрашивания, балаяж, шатуш, омбре, тонирование. Нахожу ваш цвет.</p>
-      <div class="service-expand">Окрашивание в один тон, многотональное, техники балаяж, шатуш, омбре, брондирование, растяжка цвета. Коррекция нежелательного оттенка. Тонирование для яркости и блеска.</div>
-      <span class="service-toggle">Подробнее ↓</span>
-    </div>
-    <div class="service-card" onclick="toggleService(this)">
-      <span class="service-icon">💎</span>
-      <h3>Колористика</h3>
-      <p>Профессиональная колористика: от натуральных оттенков до смелых трансформаций.</p>
-      <div class="service-expand">Цветокоррекция и исправление неудачных окрашиваний. Разработка авторской палитры под ваш цветотип. Работа с мелированием и техниками high-light / low-light.</div>
+      <h3>Окрашивание / Колористика</h3>
+      <p>Профессиональная колористика: от натуральных оттенков до смелых трансформаций. Аиртач, тотал блонд, выход из чёрного цвета, креативное окрашивание.</p>
+      <div class="service-expand">Цветокоррекция и исправление неудачных окрашиваний. Разработка авторской палитры под ваш цветотип. Работа с мелированием и техниками high-light / low-light, аиртач, тотал блонд, выход из чёрного цвета, креативное окрашивание.<br><br>Работаю с брендами Lanza (США) и Vitality's (Италия), Estel Extro — для креативных окрашиваний. Хорошо знакома с брендами L'Oréal, Paul Mitchell, Wella.<br><br>Сохранить качество волос и подчеркнуть индивидуальность клиента — для меня это главное в окрашивании.<br><br>Сложное окрашивание провожу только после консультации. На ней закрываем все вопросы по времени, техникам, краске и стоимости услуги.</div>
       <span class="service-toggle">Подробнее ↓</span>
     </div>
   </div>
@@ -267,17 +270,10 @@ footer span{color:var(--rose)}
     </div>
     <div class="services-extra">
       <div class="services-extra-card" onclick="toggleService(this)">
-        <span class="service-icon" style="font-size:1.3rem">✨</span>
-        <h3>Укладка</h3>
-        <p>Повседневные и праздничные укладки. Учу вас укладывать волосы самостоятельно.</p>
-        <div class="service-expand">Укладки на каждый день, вечерние причёски, свадебные образы. Обучение домашней укладке — подбор техники и средств именно для ваших волос.</div>
-        <span class="service-toggle">Подробнее ↓</span>
-      </div>
-      <div class="services-extra-card" onclick="toggleService(this)">
         <span class="service-icon" style="font-size:1.3rem">🌿</span>
-        <h3>Уход</h3>
-        <p>Восстановительные процедуры, кератин, ботокс для волос. Возвращаю здоровье и блеск.</p>
-        <div class="service-expand">Кератиновое выпрямление, ботокс для волос, восстанавливающие маски. Подбор домашнего ухода — советы по шампуням, кондиционерам и маслам для вашего типа волос.</div>
+        <h3>Восстанавливающие процедуры</h3>
+        <p>В работе использую несколько линий профессионального ухода. Комбинацию и последовательность этапов определяю после диагностики состояния волос.</p>
+        <div class="service-expand"><strong>INKARAMI</strong> — японская система с фуллереном и четырьмя видами кератина. Восстанавливает структуру изнутри, уплотняет и разглаживает. Время — 1,5 часа.<br><br><strong>Vitality's</strong> — реконструирующий уход с интенсивным питанием. Восстанавливает эластичность, разглаживает кутикулу, подходит для сухих, пористых и повреждённых волос. Время — 1,5 часа.<br><br><strong>SOS Prosalon</strong> — профессиональная процедура от польского бренда Chantal. Формулы с кератином и протеинами укрепляют структуру, разглаживают и возвращают эластичность. Время — 30 минут.<br><br><strong>HairSekta</strong> — аминокислотная маска для уплотнения и внутренней реконструкции. Время — 30 минут.<br><br><strong>HairSekta Коллаген / Ботокс</strong> — уплотняющий уход с коллагеном, разглаживание, блеск, накопительный эффект до 4 месяцев. Не меняет структуру волос, действует как глубокая аминокислотная реконструкция. Время — уточняю под протокол.</div>
         <span class="service-toggle">Подробнее ↓</span>
       </div>
       <div class="services-extra-card" onclick="toggleService(this)">
@@ -356,7 +352,7 @@ footer span{color:var(--rose)}
           Сколько занимает сложное окрашивание?
           <span class="faq-arrow">&#8964;</span>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner">От 2 до 5 часов в зависимости от техники, длины волос и желаемого результата. На балаяж с тонированием обычно уходит 3–4 часа. Точное время обсуждается на консультации.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Длительность сеанса — от 30 минут до 3 часов в зависимости от протокола. Точное время обсуждается на консультации.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
@@ -365,6 +361,26 @@ footer span{color:var(--rose)}
         </div>
         <div class="faq-answer"><div class="faq-answer-inner">Я веду Телеграм-канал — там живой профессиональный контент: идеи по образам, советы по уходу, новые работы и наблюдения мастера. Ссылка на канал — ниже, в разделе «Контакты».</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header reveal">
+    <p class="section-label">Отзывы</p>
+    <h2>Что говорят клиенты</h2>
+  </div>
+  <div class="reviews-grid reveal">
+    <div class="review-card">
+      <p>К Евгении я хожу очень давно. Мы прошли большой путь с разными экспериментами от бритых висков до длинных волос. Думаю, это показатель.
+
+Евгения развивается и вкладывается в обучение. Поэтому, может четко ответить на вопрос или дать грамотный совет. А главное — доступно объяснить.
+
+Я очень ценю её способность подобрать решение для конкретного человека и случая. Наверное, это то, почему я осталась.</p>
+    </div>
+    <div class="review-card">
+      <p>Женя, ещё раз хочу поблагодарить Вас за работу. Мне очень все понравилось, а особенно Ваш профессионализм, «горение» работой, желание сделать и получить максимум результата, за смелость в принятии нестандартных решений, а главное — понять и принять желание клиента, и скорректировать его в лучшую сторону! Очень рада нашей встрече и знакомству!</p>
     </div>
   </div>
 </section>
